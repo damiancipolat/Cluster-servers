@@ -39,3 +39,10 @@ Running lsof -i :8000, the master process PID 13232 is the only who use the port
 COMMAND   PID        USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
 node    13232 damianlinux   16u  IPv6  93000      0t0  TCP *:8000 (LISTEN)
 ```
+
+## Fork server I:
+In this code I will create a server that use fork process to create workers and communicate between them using a simple IPC.
+
+```js
+$ node fork-server/app.js
+```

@@ -4,6 +4,9 @@ Examples and techniques of how to create a nodejs http server using the cluster 
 ## Basic server:
 In this example I create a basic http server using the net module. We share the same por for all the workers, in order to share the socker to the workers.
 
+**Diagram:**
+![N|Solid](https://github.com/damiancipolat/Cluster-servers/blob/master/doc/sharing.png?raw=true)
+
 **To run:**
 
 ```js

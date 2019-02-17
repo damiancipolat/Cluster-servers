@@ -1,7 +1,7 @@
 # Cluster-servers
 Examples and techniques of how to create a nodejs http server using the cluster module, creating fork process.
 
-## Basic server:
+## Sharing ports:
 In this example I create a basic http server using the net module. We share the same por for all the workers, in order to share the socker to the workers.
 
 ![N|Solid](https://github.com/damiancipolat/Cluster-servers/blob/master/doc/sharing.png?raw=true)

@@ -47,4 +47,4 @@ In this code I will create a server that use fork process to create workers and 
 $ node fork-server/app.js
 ```
 
-All workers answer each request and using ipc send to the parent process the response to send at the client. In the master process there are a list of process reference. The way to delegate the answer of each request is using a random way.
+All workers answer each request and using ipc send to the parent process the response to send at the client. In the master process there are a list of process reference. The way to delegate the answer of each request is using a random way. You can take a look of the message broker created by me in other project.

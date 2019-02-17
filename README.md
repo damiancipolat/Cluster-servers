@@ -1,7 +1,7 @@
 # Cluster-servers
 Examples and techniques of how to create a nodejs http server using the cluster module, creating fork process.
 
-## Cluster server I:
+## Basic server:
 In this example I create a basic http server using the net module. We share the same por for all the workers, in order to share the socker to the workers.
 
 **To run:**
@@ -40,7 +40,7 @@ COMMAND   PID        USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
 node    13232 damianlinux   16u  IPv6  93000      0t0  TCP *:8000 (LISTEN)
 ```
 
-## Fork server:
+## Forked server:
 In this code I will create a server that use fork process to create workers and communicate between them using a simple IPC.
 
 ```js

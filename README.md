@@ -40,9 +40,11 @@ COMMAND   PID        USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
 node    13232 damianlinux   16u  IPv6  93000      0t0  TCP *:8000 (LISTEN)
 ```
 
-## Fork server I:
+## Fork server:
 In this code I will create a server that use fork process to create workers and communicate between them using a simple IPC.
 
 ```js
 $ node fork-server/app.js
 ```
+
+All workers answer each request and using ipc send to the parent process the response to send at the client. In the master process there are a list of process reference. The way to delegate the answer of each request is using a random way.

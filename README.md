@@ -45,6 +45,8 @@ node    13232 damianlinux   16u  IPv6  93000      0t0  TCP *:8000 (LISTEN)
 ## Forked server:
 In this code I will create a server that use fork process to create workers and communicate between them using a simple IPC.
 
+![N|Solid](https://github.com/damiancipolat/Cluster-servers/blob/master/doc/message.png?raw=true)
+
 ```js
 $ node fork-server/app.js
 ```

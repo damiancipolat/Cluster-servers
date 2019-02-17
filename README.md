@@ -21,7 +21,7 @@ Worker created, PID: 13244  PORT: 8000
 Worker created, PID: 13250  PORT: 8000
 ```
 
-Running a ps-la:
+Running a ps-la, nodejs have created a different process:
 
 ```sh
 F S   UID   PID  PPID  C PRI  NI ADDR SZ WCHAN  TTY          TIME CMD
@@ -31,4 +31,11 @@ F S   UID   PID  PPID  C PRI  NI ADDR SZ WCHAN  TTY          TIME CMD
 0 S  1000 13244 13232  0  80   0 - 218460 ep_pol pts/21  00:00:00 node
 0 S  1000 13250 13232  0  80   0 - 218460 ep_pol pts/21  00:00:00 node
 4 R  1000 13317 13265  0  80   0 -  7872 -      pts/35   00:00:00 ps
+```
+
+Running lsof -i :8000, the master process PID 13232 is the only who use the port "8000":
+
+```sh
+COMMAND   PID        USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+node    13232 damianlinux   16u  IPv6  93000      0t0  TCP *:8000 (LISTEN)
 ```

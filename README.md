@@ -9,7 +9,7 @@ Examples and techniques of how to create a nodejs http server using the cluster 
 [Share ports]:https://github.com/damiancipolat/Cluster-servers/blob/master/README.md#share-ports
 [Fork server]:https://github.com/damiancipolat/Cluster-servers/blob/master/README.md#forked-server
 [PM2 & cluster]:https://github.com/damiancipolat/Cluster-servers/blob/master/README.md#pm2--cluster-server
-[Docker & cluster]:https://github.com/damiancipolat/Cluster-servers/blob/master/README.md#PM2 & clusterpm2--cluster-server
+[Docker & cluster]:https://github.com/damiancipolat/Cluster-servers/blob/master/README.md#docker--cluster-server
 
 ## Share ports:
 In this example I create a basic http server using the "http" module. We share the same por for all the workers, in order to share the socket to the workers.

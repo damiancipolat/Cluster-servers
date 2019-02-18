@@ -84,7 +84,7 @@ In the last examples we learn how to create our custom load balancer process usi
 $ pm2 start process.json
 ```
 
-**Monitoring**
+**Monitoring:**
 
 To see the list of process running:
 
@@ -100,7 +100,14 @@ $ pm2 list
 
 ```
 
+To see a console UI:
+
+```sh
+$ pm2 monit
+```
+
 **Note:**
+
 Be sure your application is stateless meaning that no local data is stored in the process, for example sessions/websocket connections, session-memory and related. Use Redis, Mongo or other databases to share states between processes.
 
 Another resource on how to write efficient, production ready stateless application is The Twelve Factor Application manifesto.

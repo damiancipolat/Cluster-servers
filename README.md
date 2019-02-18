@@ -84,6 +84,22 @@ In the last examples we learn how to create our custom load balancer process usi
 $ pm2 start process.json
 ```
 
+**Monitoring**
+
+To see the list of process running:
+
+```sh
+$ pm2 list
+┌──────────┬────┬─────────┬─────────┬───────┬────────┬─────────┬────────┬─────┬───────────┬─────────────┬──────────┐
+│ App name │ id │ version │ mode    │ pid   │ status │ restart │ uptime │ cpu │ mem       │ user        │ watching │
+├──────────┼────┼─────────┼─────────┼───────┼────────┼─────────┼────────┼─────┼───────────┼─────────────┼──────────┤
+│ api      │ 0  │ N/A     │ cluster │ 26085 │ online │ 0       │ 2m     │ 0%  │ 37.3 MB   │ damianlinux │ disabled │
+│ api      │ 1  │ N/A     │ cluster │ 26091 │ online │ 0       │ 2m     │ 0%  │ 37.1 MB   │ damianlinux │ disabled │
+│ api      │ 2  │ N/A     │ cluster │ 26097 │ online │ 0       │ 2m     │ 0%  │ 36.8 MB   │ damianlinux │ disabled │
+│ api      │ 3  │ N/A     │ cluster │ 26107 │ online │ 0       │ 2m     │ 0%  │ 37.2 MB   │ damianlinux │ disabled |
+
+```
+
 **Note:**
 Be sure your application is stateless meaning that no local data is stored in the process, for example sessions/websocket connections, session-memory and related. Use Redis, Mongo or other databases to share states between processes.
 

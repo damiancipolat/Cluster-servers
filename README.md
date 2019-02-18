@@ -81,7 +81,7 @@ In the last examples we learn how to create our custom load balancer process usi
 **To run:**
 
 ```sh
-$ pm2 start processes.json
+$ pm2 start process.json
 ```
 
 **Note:**

@@ -55,10 +55,36 @@ In this code I will create a server that use fork process to create workers and 
 
 ![N|Solid](https://github.com/damiancipolat/Cluster-servers/blob/master/doc/message.png?raw=true)
 
-```js
+**To run:**
+
+```sh
 $ node fork-server/app.js
 ```
 
 All workers answer each request and using ipc send to the parent process the response to send at the client. In the master process there are a list of process reference. The way to delegate the answer of each request is using a random way. You can take a look of the message broker created by me in other project.
 
 ## PM2 & cluster server:
+In the last examples we learn how to create our custom load balances process using the children forked process, but in a production environment, maybe is'nt the best way. I think could be a better option work with a robust process manager. One good option is PM2 http://pm2.keymetrics.io. PM2 offer us the way to work as a load process balance for us, take a look of this link http://pm2.keymetrics.io/docs/usage/cluster-mode/.
+
+**Configuration, define to pm2 the number of children process to create:**
+
+```json
+{
+  "apps" : [{
+    "script"    : "api.js",
+    "instances" : "4",
+    "exec_mode" : "cluster" 
+  }]
+}
+```
+
+**To run:**
+
+```sh
+$ pm2 start processes.json
+```
+
+**Note:**
+Be sure your application is stateless meaning that no local data is stored in the process, for example sessions/websocket connections, session-memory and related. Use Redis, Mongo or other databases to share states between processes.
+
+Another resource on how to write efficient, production ready stateless application is The Twelve Factor Application manifesto.

@@ -105,6 +105,8 @@ To see a console UI:
 ```sh
 $ pm2 monit
 ```
+![N|Solid](https://github.com/damiancipolat/Cluster-servers/blob/master/doc/pm2-monit.png?raw=true)
+
 
 To finish all the process:
 

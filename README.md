@@ -145,4 +145,4 @@ Hello from worker PID:27042
 
 Be sure your application is stateless meaning that no local data is stored in the process, for example sessions/websocket connections, session-memory and related. Use Redis, Mongo or other databases to share states between processes.
 
-Another resource on how to write efficient, production ready stateless application is The Twelve Factor Application manifesto.
+Another resource on how to write efficient, production ready stateless application is The Twelve Factor Application manifesto. https://12factor.net

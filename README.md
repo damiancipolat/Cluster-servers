@@ -106,6 +106,12 @@ To see a console UI:
 $ pm2 monit
 ```
 
+To finish all the process:
+
+```sh
+$ pm2 kill
+```
+
 **Note:**
 
 Be sure your application is stateless meaning that no local data is stored in the process, for example sessions/websocket connections, session-memory and related. Use Redis, Mongo or other databases to share states between processes.

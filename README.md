@@ -17,7 +17,7 @@ In this example I create a basic http server using the "http" module. We share t
 **To run:**
 
 ```js
-$ node cluster-server.js
+$ node cluset-server/cluster-server.js
 ```
 
 And when we run the process the console output will be:

@@ -2,7 +2,7 @@
 Examples and techniques of how to create a nodejs http server using the cluster module, creating fork process.
 
 ## Sharing ports:
-In this example I create a basic http server using the net module. We share the same por for all the workers, in order to share the socket to the workers.
+In this example I create a basic http server using the "http" module. We share the same por for all the workers, in order to share the socket to the workers.
 
 ![N|Solid](https://github.com/damiancipolat/Cluster-servers/blob/master/doc/sharing-ports.png?raw=true)
 
@@ -52,3 +52,5 @@ $ node fork-server/app.js
 ```
 
 All workers answer each request and using ipc send to the parent process the response to send at the client. In the master process there are a list of process reference. The way to delegate the answer of each request is using a random way. You can take a look of the message broker created by me in other project.
+
+## PM2 & cluster server:

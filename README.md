@@ -1,7 +1,15 @@
 # Cluster servers in Node.js
 Examples and techniques of how to create a nodejs http server using the cluster module, creating fork process.
 
-## Sharing ports:
+- **[Share ports]**
+- **[Fork server]**
+- **[PM2 & cluster]**
+
+[Share ports]:https://github.com/damiancipolat/Nodejs-Design-Pattern/blob/master/README.md#factory
+[Fork server]:https://github.com/damiancipolat/Nodejs-Design-Pattern/blob/master/README.md#proxy
+[PM2 & cluster]:https://github.com/damiancipolat/Nodejs-Design-Pattern/blob/master/README.md#decorator
+
+## Share ports:
 In this example I create a basic http server using the "http" module. We share the same por for all the workers, in order to share the socket to the workers.
 
 ![N|Solid](https://github.com/damiancipolat/Cluster-servers/blob/master/doc/sharing-ports.png?raw=true)

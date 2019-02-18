@@ -105,13 +105,40 @@ To see a console UI:
 ```sh
 $ pm2 monit
 ```
-![N|Solid](https://github.com/damiancipolat/Cluster-servers/blob/master/doc/pm2-monit.png?raw=true)
 
+(Left pm2 list / Right pm2 monit)
+![N|Solid](https://github.com/damiancipolat/Cluster-servers/blob/master/doc/pm2-monit.png?raw=true)
 
 To finish all the process:
 
 ```sh
 $ pm2 kill
+```
+
+Testing the process, using curl we can see that pm2 manage the request sending it to differents process, some like a load balancer. I'm not sure what is the distribution algorithm used.??
+
+```sh
+damianlinux@damianlinux:~/Escritorio/repo/Cluster-servers$ curl http://127.0.0.1:8000
+Hello from worker PID:27074
+damianlinux@damianlinux:~/Escritorio/repo/Cluster-servers$ curl http://127.0.0.1:8000
+Hello from worker PID:27042
+damianlinux@damianlinux:~/Escritorio/repo/Cluster-servers$ curl http://127.0.0.1:8000
+Hello from worker PID:27050
+damianlinux@damianlinux:~/Escritorio/repo/Cluster-servers$ curl http://127.0.0.1:8000
+Hello from worker PID:27060
+damianlinux@damianlinux:~/Escritorio/repo/Cluster-servers$ curl http://127.0.0.1:8000
+Hello from worker PID:27074
+damianlinux@damianlinux:~/Escritorio/repo/Cluster-servers$ curl http://127.0.0.1:8000
+Hello from worker PID:27042
+damianlinux@damianlinux:~/Escritorio/repo/Cluster-servers$ curl http://127.0.0.1:8000
+Hello from worker PID:27050
+damianlinux@damianlinux:~/Escritorio/repo/Cluster-servers$ curl http://127.0.0.1:8000
+Hello from worker PID:27060
+damianlinux@damianlinux:~/Escritorio/repo/Cluster-servers$ curl http://127.0.0.1:8000
+Hello from worker PID:27074
+damianlinux@damianlinux:~/Escritorio/repo/Cluster-servers$ curl http://127.0.0.1:8000
+Hello from worker PID:27042
+
 ```
 
 **Note:**
